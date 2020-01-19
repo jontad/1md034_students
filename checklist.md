@@ -4,11 +4,11 @@ Before you submit the different parts of your lab, make sure that your project f
 
 ## 00 Introduction
 
-- [X] Install an IDE on your system
+- [x] Install an IDE on your system
 
 ## 01 Git
 
-- [ ] Fork and clone the 1md034_students repository
+- [x] Fork and clone the 1md034_students repository
 
 
 ## 02 HTML
