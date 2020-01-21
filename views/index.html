@@ -66,9 +66,9 @@
 	<h2>Customer information</h2>
 	<p>Please provide the necessary information to order</p>
 
-	<section>
-	     <h3>Delivery information</h3>
-
+	<h3>Delivery information</h3>
+	
+	<section>  <!-- All forms -->
           <form>    
 	    <p>
 	      <label for="name">Full Name</label><br>
@@ -86,8 +86,20 @@
 	      <label for="house">House</label><br>
 	      <input type="number" id="housenumber" name="hou" required="required" placeholder="House Number"/>
 	    </p>
-	                </form>
+	  </form>
 	</section>
+
+	<section> <!-- Drop down menu for payment-->
+	  <p>
+	    <label for="payment">Payment options</label><br />
+	    <select>
+              <option selected="selected">Credit Card</option>
+              <option>Swish</option>
+              <option>Klarna</option>
+	    </select>
+	  </p>
+	</section>	
+
       </section>
 
     </main>
