@@ -48,7 +48,7 @@
 	      
 	      <td>
 		<ul>
-		  <li>900 kcal</li>
+		  <li>690 kcal/900 kcal</li>
 		  <li>Can be served double or simple</li>
 		  <li>Delicious fishburger topped with in-house mayo</li>
 		  <li>Contains gluten</li>
@@ -67,9 +67,9 @@
 	<p>Please provide the necessary information to order</p>
 
 	<h3>Delivery information</h3>
-	
-	<section>  <!-- All forms -->
-          <form>    
+
+	<form>   <!-- All forms -->
+	  <section> 
 	    <p>
 	      <label for="name">Full Name</label><br>
 	      <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name"/>
@@ -86,35 +86,37 @@
 	      <label for="house">House</label><br>
 	      <input type="number" id="housenumber" name="hou" required="required" placeholder="House Number"/>
 	    </p>
-	  </form>
-	</section>
+	  </section>
 
-	<section> <!-- Drop down menu for payment-->
-	  <p>
-	    <label for="payment">Payment options</label><br />
-	    <select>
-              <option selected="selected">Credit Card</option>
-              <option>Swish</option>
-              <option>Klarna</option>
-	    </select>
-	  </p>
-	</section>
+	  <section> <!-- Drop down menu for payment-->
+	    <p>
+	      <label for="payment">Payment options</label><br />
+	      <select>
+		<option selected="selected">Credit Card</option>
+		<option>Swish</option>
+		<option>Klarna</option>
+	      </select>
+	    </p>
+	  </section>
 
-	<section>  <!-- Radio buttons-->
-	   <p>
+	  <section>  <!-- Radio buttons-->
+	    <p>
 	      <label>Gender</label><br>
 	      <input type="radio" name="gender" value="male"/>Male<br>
-	   </p>
-	  <p>
-	    <input type="radio" name="gender" value="female"/>Female<br>
-	  </p>
-	  <p>
-	    <input type="radio" name="gender" value="non-binary"/>Non-binary<br>
-	  </p>
-	  <p>
-	    <input type="radio" name="gender" value="undisclosed" checked="checked"/>Undisclosed<br>
-	  </p>
-	</section>
+	    </p>
+	    <p>
+	      <input type="radio" name="gender" value="female"/>Female<br>
+	    </p>
+	    <p>
+	      <input type="radio" name="gender" value="non-binary"/>Non-binary<br>
+	    </p>
+	    <p>
+	      <input type="radio" name="gender" value="undisclosed" checked="checked"/>Undisclosed<br>
+	    </p>
+	  </section>
+
+	</form>
+	<button type="submit"><img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order</button> <!-- Submit button --> 
 
       </section>
 
