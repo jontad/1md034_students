@@ -28,7 +28,22 @@ button:hover {
     cursor: pointer;
 }
 
+button {
+    margin-left: 10px;
+}
+
 table {
     width: 102%;
     align-self: center;
 }
+
+section {
+    margin: 12px;
+}
+
+.burger_title, table {
+    margin: 15px 7px;
+    padding-top: 5px;
+}
+
+
