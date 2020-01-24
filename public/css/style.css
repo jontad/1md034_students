@@ -14,10 +14,15 @@ body {
 #burger_selection {
     color: white;
     background-color: #473936; /** Lighter black **/
+
+    border: 2px dotted white;
+    border-radius: 20px;
 }
 
 
 #whole_form {
+    border: 2px dotted black;
+    border-radius: 20px;
 }
 
 
@@ -28,7 +33,13 @@ button:hover {
     cursor: pointer;
 }
 
-button {
+.button {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.form_text {
     margin-left: 10px;
 }
 
@@ -44,6 +55,12 @@ section {
 .burger_title, table {
     margin: 15px 7px;
     padding-top: 5px;
+}
+
+.main_title {
+    margin: 15px 22px;
+    padding-top: 5px;
+
 }
 
 
