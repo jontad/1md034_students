@@ -1,0 +1,34 @@
+
+body {
+    font-family: arial;
+    font-size: 120%;
+    margin: 0 auto;
+}
+     
+
+.drop, .allergy {
+    font-weight: bold;
+}
+
+
+#burger_selection {
+    color: white;
+    background-color: #473936; /** Lighter black **/
+}
+
+
+#whole_form {
+}
+
+
+button:hover {
+    background-color: #9B9DA0;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+table {
+    width: 102%;
+    align-self: center;
+}
