@@ -17,48 +17,54 @@
 
 	<table>
 	  <tbody>
-	    <tr>  <!-- Burger names -->
-	      <td><h3>The Fire Burger</h3></td> 
-	      <td><h3>The Beaut</h3></td>
-	      <td><h3>The Seafood Special</h3></td>      
-	    </tr>
 	    
-	    <tr>  <!-- Burger Images -->
-	      <td><img src="https://www.burgerdudes.se/wp-content/uploads/2015/02/shackburger_shakeshack_ny_till_rec.jpg" width=320></td>
-	      <td><img src= "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg" width=350></td>
-	      <td><img src= "https://www.mcdonalds.com/is/image/content/dam/nordic/nutrition/products/carousels/Product_Campaign_sv_chickenElmaco.jpg?$THUMBNAIL_MEDIUM$" width=230></td>
-	    </tr>
+	    <section class="burger">  <!-- Burger names -->
+	      <tr> 
+		<td><h3>The Fire Burger</h3></td> 
+		<td><h3>The Beaut</h3></td>
+		<td><h3>The Seafood Special</h3></td>      
+	      </tr>
+	    </section>
 
-	    <tr>  <!-- Descriptions -->
-	      <td>
-		<ul>
-		  <li>790 kcal</li>
-		  <li>Cheeseburger topped with lettuce, tomato and habanero peppers</li>
-		  <li>Served with fries and a drink</li>
-		  <li>Contains gluten and lactose</li>
-		</ul>
-	      </td>
-	      
-	      <td>
-		<ul>
-		  <li>600 kcal</li>
-		  <li>Our most picturesque burger. Topped with pepper jack cheese and bacon</li>
-		  <li>Can be served gluten-free</li>
-		  <li>Contains gluten and lactose</li>
-		</ul>
-	      </td>
-	      
-	      <td>
-		<ul>
-		  <li>690 kcal/900 kcal</li>
-		  <li>Can be served double or simple</li>
-		  <li>Delicious fishburger topped with in-house mayo</li>
-		  <li>Contains gluten</li>
-		  <li>OBS: Everything is ethically produced</li>
-		</ul>
-	      </td>
-	    </tr>
+	    <section>
+	      <tr>  <!-- Burger Images -->
+		<td><img src="https://www.burgerdudes.se/wp-content/uploads/2015/02/shackburger_shakeshack_ny_till_rec.jpg" width=320></td>
+		<td><img src= "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg" width=350></td>
+		<td><img src= "https://www.mcdonalds.com/is/image/content/dam/nordic/nutrition/products/carousels/Product_Campaign_sv_chickenElmaco.jpg?$THUMBNAIL_MEDIUM$" width=230></td>
+	      </tr>
+	    </section>
 
+	      <tr>  <!-- Descriptions -->
+		<section class="desc">
+		  <td>
+		    <ul>
+		      <li>790 kcal</li>
+		      <li>Cheeseburger topped with lettuce, tomato and habanero peppers</li>
+		      <li>Served with fries and a drink</li>
+		      <li class="allergy">Contains gluten and lactose</li>
+		  </ul>
+		  </td>
+		
+		  <td>
+		    <ul>
+		      <li>600 kcal</li>
+		      <li>Our most picturesque burger. Topped with pepper jack cheese and bacon</li>
+		      <li>Can be served gluten-free</li>
+		      <li class="allergy">Contains gluten and lactose</li>
+		    </ul>
+		  </td>
+		
+		  <td>
+		    <ul>
+		      <li>690 kcal/900 kcal</li>
+		      <li>Can be served double or simple</li>
+		      <li>Delicious fishburger topped with in-house mayo</li>
+		      <li class="allergy">Mayo contains nuts</li>
+		    </ul>
+		  </td>
+		</section>
+	      </tr>
+	      
 	  </tbody>
 	</table>
 	
@@ -71,7 +77,7 @@
 	<h3>Delivery information</h3>
 
 	<form>   <!-- All forms -->
-	  <section> 
+	  <section class="form"> 
 	    <p>
 	      <label for="name">Full Name</label><br>
 	      <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name"/>
@@ -90,10 +96,10 @@
 	    </p>
 	  </section>
 
-	  <section> <!-- Drop down menu for payment-->
+	  <section class="droptitle"> <!-- Drop down menu for payment-->
 	    <p>
 	      <label for="payment">Payment options</label><br />
-	      <select>
+	      <select class="drop">
 		<option selected="selected">Credit Card</option>
 		<option>Swish</option>
 		<option>Klarna</option>
@@ -102,7 +108,7 @@
 	    </p>
 	  </section>
 
-	  <section>  <!-- Radio buttons-->
+	  <section class="radio">  <!-- Radio buttons-->
 	    <p>
 	      <label>Gender</label><br>
 	      <input type="radio" name="gender" value="male"/>Male<br>
