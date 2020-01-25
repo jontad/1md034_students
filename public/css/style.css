@@ -48,7 +48,7 @@ table {
     align-self: center;
 }
 
-section {
+section, header{
     margin: 12px;
 }
 
@@ -57,10 +57,14 @@ section {
     padding-top: 5px;
 }
 
-.main_title {
-    margin: 15px 22px;
-    padding-top: 5px;
-
+.header_pic {
+    height: 190px;
+    width: 1325px;
+    opacity: 0.85;
 }
+
+
+
+
 
 
