@@ -48,7 +48,7 @@ table {
     align-self: center;
 }
 
-section, header{
+section, .header {
     margin: 12px;
 }
 
@@ -58,13 +58,25 @@ section, header{
 }
 
 .header_pic {
-    height: 190px;
-    width: 1325px;
-    opacity: 0.85;
+    height: 250px;
+    width: 1300px;
+    opacity: .6;
 }
 
+.title {
+    color: black;
 
+    position: absolute;
+    left: 400px;
+    bottom: 460px;
+}
 
+.header {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
 
 
 
