@@ -78,5 +78,60 @@ section, .header {
     padding: 5px;
 }
 
+/** GRID **/
+
+.wrapper {
+     display: grid;
+     grid-gap: 50px;
+     grid-template-columns: 400px 400px 400px;
+     padding-left: 30px;
+}
+
+ .box {
+     
+     font-size: 120%;
+ }
+
+ 
+ .a {
+     grid-column: 1 ;
+     grid-row: 1;
+ }
+ .b {
+     grid-column: 1;
+     grid-row: 2;
+ }
+ .c {
+     grid-column: 1;
+     grid-row: 3;
+ }
 
 
+ 
+ .d {
+     grid-column: 2 ;
+     grid-row: 1;
+ }
+ .e {
+     grid-column: 2;
+     grid-row: 2;
+ } 
+ .f {
+     grid-column: 2;
+     grid-row: 3;
+ }
+
+ 
+.g {
+     grid-column: 3 ;
+     grid-row: 1;
+ }
+ .h {
+     grid-column: 3;
+     grid-row: 2;
+ } 
+ .
+ i {
+     grid-column: 3;
+     grid-row: 3;
+ }
