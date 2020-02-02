@@ -19,3 +19,11 @@ let mcBurger = new menuItem("McTastic", 300, true, false);
 let jtBurger = new menuItem("The JT", 1000, false, true);
 
 console.log(nameAndKcal(jtBurger));
+
+
+
+document.getElementById("b1").innerHTML = fireBurger.name
+document.getElementById("b2").innerHTML = beautBurger.name
+document.getElementById("b3").innerHTML = seaFoodBurger.name
+document.getElementById("b4").innerHTML = mcBurger.name
+document.getElementById("b5").innerHTML = jtBurger.name
