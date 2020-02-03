@@ -18,12 +18,22 @@ let seaFoodBurger = new menuItem("The Seafood Special", 900, false, false);
 let mcBurger = new menuItem("McTastic", 300, true, false);
 let jtBurger = new menuItem("The JT", 1000, false, true);
 
+let menu = [fireBurger, beautBurger, seaFoodBurger, mcBurger, jtBurger];
+
+let burgerID = ["b1", "b2", "b3", "b4", "b5"];
+for(let i = 0; i < burgerID.length; i++){
+    let burger = menu[i];
+    let burgerName = burger.name + " |"
+    let burgerNo = burgerID[i];
+
+    if(burger.gluten){
+  	burgerName = burgerName + "\nContains Gluten"
+    }
+    if(burger.lactose){
+	burgerName = burgerName + "\n Contains Lactose"
+    }
+    document.getElementById(burgerNo).innerHTML = burgerName
+}
+
+
 console.log(nameAndKcal(jtBurger));
-
-
-
-document.getElementById("b1").innerHTML = fireBurger.name
-document.getElementById("b2").innerHTML = beautBurger.name
-document.getElementById("b3").innerHTML = seaFoodBurger.name
-document.getElementById("b4").innerHTML = mcBurger.name
-document.getElementById("b5").innerHTML = jtBurger.name

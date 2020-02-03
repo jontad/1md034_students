@@ -19,3 +19,11 @@ const vm = new Vue({
   }
 })
 
+
+
+const vm = new Vue({
+  el: '#myID',
+  data: {
+  	menu:menu
+   },
+})
