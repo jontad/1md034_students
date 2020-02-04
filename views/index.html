@@ -5,10 +5,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script> 
     <script src="https://vuejs.org/js/vue.js"></script>    
    
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>  <!-- kanske fel path  -->
 
     
     <title>Burger Haven</title> <!-- Tab -->
@@ -25,40 +25,17 @@
 	<h2 class="burger_title">Select Burger</h2>
 	<p class="burger_title">This is where you can select burgers</p>
 
-	<div class="wrapper"> <!-- Grid -->
-	  <div class="box a">
-	    <h3>The Fire Burger</h3> 
-	    <img src="https://www.burgerdudes.se/wp-content/uploads/2015/02/shackburger_shakeshack_ny_till_rec.jpg" width=320>
-	    <ul>
-	      <li>790 kcal</li>
-	      <li>Cheeseburger tomato and habanero peppers</li>
-	      <li>Served with fries and a drink</li>
-	      <li class="allergy">Contains gluten and lactose</li>
-	    </ul>
-	  </div>
-
-	  <div class="box b">	  
-	    <h3>The Beaut</h3>
-	    <img src="https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg" width=350>
-	    <ul>
-	      <li>600 kcal</li>
-	      <li>Topped with pepper jack cheese and bacon</li>
-	      <li>Can be served gluten-free</li>
-	      <li class="allergy">Contains gluten and lactose</li>
-	    </ul>
-	  </div>
-
-	  <div class="box c">
-	    <h3>The Seafood Special</h3>      
-	    <img src="https://www.max.se/contentassets/ff1439a7a1624cf4a6b068c37d0db25f/product_crispy-no-chicken2.jpg" width=280>     
-	    <ul>
-	      <li>690 kcal/900 kcal</li>
-	      <li>Can be served double or simple</li>
-	      <li>Fishburger topped with in-house mayo</li>
-	      <li class="allergy">Mayo contains nuts</li>
-	    </ul>	    
-	  </div>
-
+	<div id="vue"> <!-- Grid/Vue -->
+	    <div v-for="(burger, index) in menu">
+	      <h3>{{burger.name}}</h3>
+	      <img :src="burger.imagePath" width="300" height="250">
+	      <ul>
+		<li>{{burger.kCal}}</li>
+		<li>{{burger.info1}}</li>
+		<li>{{burger.info2}}</li>
+		<li>{{burger.allergy}}</li>
+	      </ul>
+	    </div>
 	</div>
       </section>
 
@@ -115,15 +92,15 @@
 	      <input type="radio" name="gender" value="undisclosed" checked="checked"/>Undisclosed<br>
 	    </p>
 	  </section>
-
 	</form>
-	<button class="button" type="submit"><img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order</button> <!-- Submit button --> 
 
+	<button class="button" type="submit"><img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order</button> <!-- Submit button --> 
       </section>
 
     </main>
+
     <footer>
     </footer>
-  </body>
 
+  </body>
 </html>

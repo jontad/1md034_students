@@ -1,9 +1,8 @@
 /*
-
 const vm = new Vue({
   el: '#myID',
   data: {
-      arbitraryVariableName: 'Välj en burgare' + new Date()
+  arbitraryVariableName: 'Välj en burgare' + new Date()
   }
 })
 
@@ -18,13 +17,14 @@ const vm = new Vue({
     b5: jtBurger.name,
   }
 })
+*/
+
 
 
 
 const vm = new Vue({
-  el: '#myID',
+  el: '#vue',
   data: {
   	menu:menu
    },
 })
-*/
