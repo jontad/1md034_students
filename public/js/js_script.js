@@ -20,20 +20,34 @@ let jtBurger = new menuItem("The JT", 1000, false, true);
 
 let menu = [fireBurger, beautBurger, seaFoodBurger, mcBurger, jtBurger];
 
+//let burgers = document.getElementById(menu).innerHTML
+
+
+
 let burgerID = ["b1", "b2", "b3", "b4", "b5"];
 for(let i = 0; i < burgerID.length; i++){
     let burger = menu[i];
-    let burgerName = burger.name + " |"
+    var burgerName = burger.name + " |"
     let burgerNo = burgerID[i];
 
     if(burger.gluten){
   	burgerName = burgerName + "\nContains Gluten"
     }
     if(burger.lactose){
-	burgerName = burgerName + "\n Contains Lactose"
+	burgerName = burgerName + "\nContains Lactose"
     }
-    document.getElementById(burgerNo).innerHTML = burgerName
+}
+
+var rows = document.getElementsByClassName("box");
+console.log(rows);
+
+function column() {
+  for (i = 0; i < rows.length; i++) {
+    rows[i].style.width = "200%";
+  }
 }
 
 
-console.log(nameAndKcal(jtBurger));
+
+
+
