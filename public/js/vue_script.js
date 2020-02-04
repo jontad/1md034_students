@@ -25,6 +25,6 @@ const vm = new Vue({
 const vm = new Vue({
   el: '#vue',
   data: {
-  	menu:menu
+  	menu:food
    },
 })
