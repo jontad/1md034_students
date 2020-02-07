@@ -1,4 +1,3 @@
-
 /*
 function nameAndKcal(menuItem) {
     return "Name: " + menuItem.name + "\nCalories: " + menuItem.kCal + " kCal"; 
@@ -66,5 +65,37 @@ for (i = 0; i < burger.length; i++) {
     list.appendChild(point4);
     
     burger[i].appendChild(list);
+}
+*/
+
+/*
+function click() { 
+    console.log("Button Clicked!");
+} 
+
+let button = document.getElementById("button"); 
+button.addEventListener("click", click);
+
+
+button.addEventListener("click", inputReader);
+function inputReader(){
+    
+    let name = document.getElementById("fullname").value;
+    let email = document.getElementById("email").value;
+    let street = document.getElementById("street").value;
+    let number = document.getElementById("housenumber").value;
+
+    let drop = document.getElementById("drop").value;
+      
+    var gender; 
+    let radio = document.getElementsByName("gender");
+    for(let i = 0; i < radio.length; i++){
+	if(radio[i].checked){
+	    gender = radio[i].value;
+	    break;
+	}
+    }
+    let input = [name, email, street, number, drop, gender];
+    console.log(input);
 }
 */

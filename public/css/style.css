@@ -4,7 +4,12 @@ body {
     font-size: 120%;
     margin: 0 auto;
 }
-     
+
+#test {
+    font-family: arial;
+    font-size: 90%;
+    margin: 0 auto;
+}
 
 .drop, .allergy {
     font-weight: bold;
@@ -17,10 +22,6 @@ body {
 
     border: 2px dotted white;
     border-radius: 20px;
-}
-
-#ignore {
-    color: #473936;
 }
 
 #whole_form {
@@ -36,7 +37,7 @@ button:hover {
     cursor: pointer;
 }
 
-.button {
+#button {
     margin-left: 10px;
     margin-bottom: 20px;
 }

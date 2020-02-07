@@ -2,15 +2,13 @@
 <html lang="en">
 
   <head>
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script type="text/javascript" src="js/menu.js"></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script> 
     <script src="https://vuejs.org/js/vue.js"></script>    
-   
-
+    <script type="text/javascript" src="js/menu.js"></script>
+ 
     
     <title>Burger Haven</title> <!-- Tab -->
     <meta charset="utf-8"/>
@@ -26,50 +24,61 @@
 	<h2 class="burger_title">Select Burger</h2>
 	<p class="burger_title">This is where you can select burgers</p>
 
-	<div id="vue"> <!-- Grid/Vue -->
-	    <div v-for="(burger, index) in menu">
-	      <h3>{{burger.name}}</h3>
-	      <img :src="burger.imagePath" width="300" height="250">
-	      <ul>
-		<li>{{burger.kCal}}</li>
-		<li>{{burger.info1}}</li>
-		<li>{{burger.info2}}</li>
-		<li>{{burger.allergy}}</li>
-	      </ul>
-	    </div>
-	</div>
+   <!-- <div id="row">
+	     <div class="column"></div>
+	     <div class="column"></div>
+	     <div class="column"></div>
+	     <div class="column"></div>
+	     <div class="column"></div>
+	</div> -->
+
+	
+	<div id="vue"> <!-- Grid/Vue --> 
+	  <div v-for="(burger, index) in food">
+	    <h3>{{burger.name}}</h3>
+	    <img :src="burger.img" width="300" height="250">
+	    <ul>
+	      <li>{{burger.kCal}}</li>
+	      <li>{{burger.lactose}}</li>
+	      <li>{{burger.gluten}}</li>
+	      <li>{{burger.info}}</li>
+	    </ul>
+	    <p>
+	      <input type="checkbox" :value="burger.name" v-model="burgers"/><br>
+	    </p>
+	  </div>
+	</div> 
       </section>
 
       <section id="whole_form">
 	<h2 class="form_text">Customer information</h2>
 	<p class="form_text">Please provide the necessary information to order</p>
-
 	<h3 class="form_text">Delivery information</h3>
 
 	<form>   <!-- All forms -->
 	  <section class="form"> 
 	    <p>
 	      <label for="name">Full Name</label><br>
-	      <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name"/>
+	      <input type="text" id="fullname" name="fn" required="required" placeholder="First -and Last name" v-model="name"/>
 	    </p>
 	    <p>
 	      <label for="mail">E-mail</label><br>
-	      <input type="email" id="email" name="em" required="required" placeholder="E-mail address"/>
+	      <input type="email" id="email" name="em" required="required" placeholder="E-mail address" v-model="email"/>
 	    </p>
 	    <p>
 	      <label for="street">Street</label><br>
-	      <input type="text" id="street" name="st" required="required" placeholder="Street name"/>
+	      <input type="text" id="street" name="st" required="required" placeholder="Street name" v-model="street"/>
 	    </p>
 	    <p>
 	      <label for="house">House</label><br>
-	      <input type="number" id="housenumber" name="hou" required="required" placeholder="House Number"/>
+	      <input type="number" id="housenumber" name="hou" required="required" placeholder="House Number" v-model="house"/>
 	    </p>
 	  </section>
 
 	  <section class="droptitle"> <!-- Drop down menu for payment-->
 	    <p>
 	      <label for="payment">Payment options</label><br />
-	      <select class="drop">
+	      <select v-model="pay" id="drop">
 		<option selected="selected">Credit Card</option>
 		<option>Swish</option>
 		<option>Klarna</option>
@@ -81,27 +90,29 @@
 	  <section class="radio">  <!-- Radio buttons-->
 	    <p>
 	      <label>Gender</label><br>
-	      <input type="radio" name="gender" value="male"/>Male<br>
+	      <input type="radio" name="gender" value="Male" v-model="gender"/>Male<br>
 	    </p>
 	    <p>
-	      <input type="radio" name="gender" value="female"/>Female<br>
+	      <input type="radio" name="gender" value="Female" v-model="gender"/>Female<br>
 	    </p>
 	    <p>
-	      <input type="radio" name="gender" value="non-binary"/>Non-binary<br>
+	      <input type="radio" name="gender" value="Non-Binary" v-model="gender"/>Non-binary<br>
 	    </p>
 	    <p>
-	      <input type="radio" name="gender" value="undisclosed" checked="checked"/>Undisclosed<br>
+	      <input type="radio" name="gender" value="Undisclosed" checked="checked" v-model="gender"/>Undisclosed<br>
 	    </p>
 	  </section>
 	</form>
-
-	<button class="button" type="submit"><img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order</button> <!-- Submit button --> 
+	
+	<button v-on:click="inputDone" id="button" type="button">
+	  <img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order
+	</button> <!-- Submit button --> 
+	<span id="test" class="form">{{output}}</span>
       </section>
 
     </main>
-
+    
     <footer>
     </footer>
-
   </body>
 </html>
