@@ -4,11 +4,12 @@
   <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <script src="/socket.io/socket.io.js" defer></script>
+
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script> 
     <script src="https://vuejs.org/js/vue.js"></script>    
     <script type="text/javascript" src="js/menu.js"></script>
- 
     
     <title>Burger Haven</title> <!-- Tab -->
     <meta charset="utf-8"/>
@@ -24,13 +25,6 @@
 	<h2 class="burger_title">Select Burger</h2>
 	<p class="burger_title">This is where you can select burgers</p>
 
-   <!-- <div id="row">
-	     <div class="column"></div>
-	     <div class="column"></div>
-	     <div class="column"></div>
-	     <div class="column"></div>
-	     <div class="column"></div>
-	</div> -->
 
 	
 	<div id="vue"> <!-- Grid/Vue --> 
@@ -65,14 +59,6 @@
 	      <label for="mail">E-mail</label><br>
 	      <input type="email" id="email" name="em" required="required" placeholder="E-mail address" v-model="email"/>
 	    </p>
-	    <p>
-	      <label for="street">Street</label><br>
-	      <input type="text" id="street" name="st" required="required" placeholder="Street name" v-model="street"/>
-	    </p>
-	    <p>
-	      <label for="house">House</label><br>
-	      <input type="number" id="housenumber" name="hou" required="required" placeholder="House Number" v-model="house"/>
-	    </p>
 	  </section>
 
 	  <section class="droptitle"> <!-- Drop down menu for payment-->
@@ -103,6 +89,18 @@
 	    </p>
 	  </section>
 	</form>
+
+	<h1> Click in the map! </h1>
+	<a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+	<div class="view-box">
+	  <div id="dots" v-on:click="addOrder">
+            <div 
+              v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+              {{key}}
+            </div>
+	  </div>
+	</div>
 	
 	<button v-on:click="inputDone" id="button" type="button">
 	  <img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order
