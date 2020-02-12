@@ -19,8 +19,8 @@ const vm = new Vue({
 	output: "",
 
 	orders: {}
+	//localOrder: {x: 0, y: 0}
     },
-
     created: function() {
 	/* When the page is loaded, get the current orders stored on the server.
 	 * (the server's code is in app.js) */
@@ -37,7 +37,6 @@ const vm = new Vue({
 	    this.orders = data.orders;
 	}.bind(this));
     },
-
     methods: {
 	inputDone: function(){
 	    this.output = 'Name: ' + this.name + ' Email: ' + this.email
@@ -72,5 +71,34 @@ const vm = new Vue({
 		orderItems: ['Beans', 'Curry'],
 	    });
 	},
-    },
+    }
 });
+
+
+
+
+
+
+
+/**	},
+	},
+	displayOrder: function(event) {**/
+/* When you click in the map, a click event object is sent as parameter
+ * to the function designated in v-on:click (i.e. this one).
+ * The click event object contains among other things different
+ * coordinates that we need when calculating where in the map the click
+ * actually happened. */
+/**	let offset = {
+	x: event.currentTarget.getBoundingClientRect().left,
+	y: event.currentTarget.getBoundingClientRect().top,
+	};
+	socket.on('addOrder', {
+	orderId: "T",
+	details: {
+	x: event.clientX - 10 - offset.x,
+	y: event.clientY - 10 - offset.y,
+	},
+	orderItems: ['Beans', 'Curry'],
+	});
+	},
+	});**/
