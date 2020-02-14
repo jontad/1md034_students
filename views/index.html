@@ -23,10 +23,7 @@
 
       <section id="burger_selection">
 	<h2 class="burger_title">Select Burger</h2>
-	<p class="burger_title">This is where you can select burgers</p>
-
-
-	
+	<p class="burger_title">This is where you can select burgers</p>	
 	<div id="vue"> <!-- Grid/Vue --> 
 	  <div v-for="(burger, index) in food">
 	    <h3>{{burger.name}}</h3>
@@ -99,11 +96,27 @@
 	   </div>
 	 </div>
 	</div>
+
 	
 	<button v-on:click="addOrder" id="button" type="button">
 	  <img src="http://pixelartmaker.com/art/04105190694298f.png" width=40 /> Submit order
 	</button> <!-- Submit button -->
 	<span id="test" class="form">{{output}}</span>
+
+
+	<div class="order" v-if="status">
+	  <h2 class="order">Order Confirmation</h2>
+	  <h3 class="order">Customer details</h3>
+	  Name: {{name}}</br>
+	  Email: {{email}}</br>
+	  Payment: {{pay}}</br>
+	  Gender: {{gender}}</br>
+	    
+	  <h3>Order Summary</h3>
+          {{burgers.join(", ")}}
+	  
+	</div>
+	
       </section>
 
     </main>

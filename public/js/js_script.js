@@ -29,7 +29,7 @@ for (i = 0; i < burger.length; i++) {
     //Name
     let elem = document.createElement('h3');
     let name = document.createTextNode(menu[i].name);
-    elem.appendChild(name);
+<    elem.appendChild(name);
 
     burger[i].appendChild(elem);
 

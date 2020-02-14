@@ -136,3 +136,12 @@ section, .header {
 	height:20px;
 	text-align: center;
 }
+
+/** Order Confirmation **/
+
+.class {
+ font-family: Times, "Times New Roman", serif;
+    font-size: 120%;
+    margin: 0 auto;
+}
+
